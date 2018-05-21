@@ -5,17 +5,20 @@ output: html_document
 ```{r}
 library(tidyverse)
 library(readr)
-```
-
-```{r}
-MyCampus_Results <- read_csv("~/Desktop/MyCampus-Results_updated.csv")
-```
-
-```{r}
 library(readxl)
+```
+
+```{r, message=FALSE}
+MyCampus_Results <- read_csv("~/Desktop/MyCampus_Results_updated.csv")
+```
+
+```{r}
 Survey_Results_Master <- read_excel("~/Desktop/ClassroomData-master/Survey Results - Master.xlsx")
 ```
 
+```{r}
+read_excel("~/Desktop/smith scores.xlsx")
+```
 
 ```{r}
 custom <- separate(MyCampus_Results , customdata,into=c("a","b","c","d"),sep=",")
@@ -37,6 +40,7 @@ faculty_campus %>%
 ```
 
 
+<<<<<<< HEAD
 ```{r}
 scores<-read_csv("~/Desktop/smith_scores.csv")
 ```
@@ -44,5 +48,13 @@ scores<-read_csv("~/Desktop/smith_scores.csv")
 ```{r}
 scores_only <- subset(scores,select=c(building_room_crn,room_info,location,environmental_quality,layout_furnishings,tools_technology,safety,accessibility,total))
 summary(scores_only)
+=======
+```{r, message = FALSE}
+smith_scores<-read_csv("~/Desktop/smith_scores.csv")
+```
+
+```{r}
+scores_only <- subset(smith_scores,select=c(building_room_crn,total))
+>>>>>>> 02c7f434016ae6ba087696c5bd55b1a7819949e3
 ```
 
