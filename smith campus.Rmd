@@ -13,7 +13,6 @@ MyCampus_Results <- read_csv("~/Desktop/MyCampus_Results_updated.csv")
 ```
 
 ```{r}
-library(readxl)
 Survey_Results_Master <- read_excel("~/Desktop/ClassroomData-master/Survey Results - Master.xlsx")
 ```
 
