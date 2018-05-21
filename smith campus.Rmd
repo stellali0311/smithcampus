@@ -5,22 +5,20 @@ output: html_document
 ```{r}
 library(tidyverse)
 library(readr)
+library(readxl)
 ```
 
 ```{r}
 MyCampus_Results <- read_csv("~/Desktop/MyCampus_Results_updated.csv")
 ```
 
-
-library(readxl)
+```{r}
 Survey_Results_Master <- read_excel("~/Desktop/ClassroomData-master/Survey Results - Master.xlsx")
-<<<<<<< HEAD
-View(Survey_Results_Master)
-
-=======
 ```
->>>>>>> 2d92512612b3bc58ec5aa0ee09c9cc0b6444dab1
 
+```{r}
+read_excel("~/Desktop/smith scores.xlsx")
+```
 
 ```{r}
 custom <- separate(MyCampus_Results , customdata,into=c("a","b","c","d"),sep=",")
@@ -43,6 +41,6 @@ faculty_campus %>%
 
 
 ```{r}
-read_excel("~/Desktop/smith scores.xlsx")
+
 ```
 
