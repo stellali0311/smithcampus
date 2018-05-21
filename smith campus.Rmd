@@ -17,10 +17,6 @@ Survey_Results_Master <- read_excel("~/Desktop/ClassroomData-master/Survey Resul
 ```
 
 ```{r}
-read_excel("~/Desktop/smith scores.xlsx")
-```
-
-```{r}
 custom <- separate(MyCampus_Results , customdata,into=c("a","b","c","d"),sep=",")
 head(custom)
 favorite <- custom %>%
@@ -39,8 +35,6 @@ faculty_campus %>%
   filter()
 ```
 
-
-<<<<<<< HEAD
 ```{r}
 scores<-read_csv("~/Desktop/smith_scores.csv")
 ```
@@ -48,13 +42,6 @@ scores<-read_csv("~/Desktop/smith_scores.csv")
 ```{r}
 scores_only <- subset(scores,select=c(building_room_crn,room_info,location,environmental_quality,layout_furnishings,tools_technology,safety,accessibility,total))
 summary(scores_only)
-=======
-```{r, message = FALSE}
-smith_scores<-read_csv("~/Desktop/smith_scores.csv")
 ```
 
-```{r}
-scores_only <- subset(smith_scores,select=c(building_room_crn,total))
->>>>>>> 02c7f434016ae6ba087696c5bd55b1a7819949e3
-```
 
