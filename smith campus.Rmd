@@ -8,18 +8,17 @@ library(readr)
 ```
 
 ```{r}
-MyCampus_Results <- read_csv("~/Desktop/MyCampus-Results_updated.csv")
+MyCampus_Results <- read_csv("~/Desktop/MyCampus_Results_updated.csv")
 ```
 
 ```{r}
 library(readxl)
 Survey_Results_Master <- read_excel("~/Desktop/ClassroomData-master/Survey Results - Master.xlsx")
-View(Survey_Results_Master)
 ```
 
 
 ```{r}
-custom<-separate(MyCampus_Results, customdata,into=c("a","b","c","d"),sep=",")
+custom <- separate(MyCampus_Results , customdata,into=c("a","b","c","d"),sep=",")
 head(custom)
 favorite <- custom %>%
   group_by(icon_id = "favorite_place")
@@ -27,12 +26,18 @@ favorite <- custom %>%
 
 
 ```{r}
-students_campus <- MyCampus_Results_updated %>%
+students_campus <- MyCampus_Results %>%
   filter(faculty == "na" )
 
-faculty_campus <- MyCampus_Results_updated %>%
+faculty_campus <- MyCampus_Results %>%
   filter(faculty != "na")
 
 faculty_campus %>%
   filter()
 ```
+
+
+```{r}
+read_excel("~/Desktop/smith scores.xlsx")
+```
+
