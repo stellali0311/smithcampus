@@ -8,8 +8,8 @@ library(readr)
 library(readxl)
 ```
 
-```{r}
-MyCampus_Results <- read_csv("~/Desktop/MyCampus-Results_updated.csv")
+```{r, message=FALSE}
+MyCampus_Results <- read_csv("~/Desktop/MyCampus_Results_updated.csv")
 ```
 
 ```{r}
@@ -41,11 +41,11 @@ faculty_campus %>%
 ```
 
 
-```{r}
+```{r, message = FALSE}
 smith_scores<-read_csv("~/Desktop/smith_scores.csv")
 ```
 
 ```{r}
-scores_only <- subset(scores,select=c(building_room_crn,TOTAL))
+scores_only <- subset(smith_scores,select=c(building_room_crn,total))
 ```
 
