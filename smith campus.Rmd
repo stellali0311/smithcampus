@@ -38,10 +38,11 @@ faculty_campus %>%
 
 
 ```{r}
-scores<-read_excel("~/Desktop/smith scores.xlsx")
+scores<-read_csv("~/Desktop/smith_scores.csv")
 ```
 
 ```{r}
-scores_only <- subset(scores,select=c(building_room_crn,TOTAL))
+scores_only <- subset(scores,select=c(building_room_crn,room_info,location,environmental_quality,layout_furnishings,tools_technology,safety,accessibility,total))
+summary(scores_only)
 ```
 
