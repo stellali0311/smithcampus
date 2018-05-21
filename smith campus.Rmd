@@ -13,10 +13,7 @@ MyCampus_Results <- read_csv("~/Desktop/MyCampus-Results_updated.csv")
 ```
 
 ```{r}
-<<<<<<< HEAD
-=======
 library(readxl)
->>>>>>> 396c0364b32787527597ecd26504c880114bd136
 Survey_Results_Master <- read_excel("~/Desktop/ClassroomData-master/Survey Results - Master.xlsx")
 ```
 
@@ -45,14 +42,10 @@ faculty_campus %>%
 
 
 ```{r}
-<<<<<<< HEAD
-
-=======
-scores<-read_excel("~/Desktop/smith scores.xlsx")
+smith_scores<-read_csv("~/Desktop/smith_scores.csv")
 ```
 
 ```{r}
 scores_only <- subset(scores,select=c(building_room_crn,TOTAL))
->>>>>>> 396c0364b32787527597ecd26504c880114bd136
 ```
 
